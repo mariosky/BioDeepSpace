@@ -40,7 +40,7 @@ These functions are not application dependant:
 * exchange(*population_list*, *kwparams*)
 * kill_old(*population_list*, *kwparams*)
 
-### Search is done by pushing populations to population based algorithms:
+### Search is done by pushing populations algorithms:
 * eval_functions(population)
 * ga(population, iterations,  *kwparams*)
 * pso(population, iterations,  *kwparams*)
