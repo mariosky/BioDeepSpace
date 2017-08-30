@@ -3,10 +3,10 @@
 
 ### The Most Basic Object is a Population
 
-* The most basic object we care about is a population.
+* We only care about population objects not individuals.
 * We allways have collection of small populations.
 * Populations are only data. JSON objects with out any methods.
-* Populations can have arbitrary metadata depending on the application dependant. We propose to start with:
+* Populations can have arbitrary metadata depending on the application. We propose to start with:
     * id
     * age
     * best-solution
@@ -14,7 +14,9 @@
     * target-fitness
 * The actual population is a list of JSON objects. They are normally a list of individuals or even other populations.
 
-´´´ python
+For instance a population in python could be:
+
+``` python
 {
     'id':'8sfgsdfg098qt7981739487',
     'age':2,
@@ -29,6 +31,6 @@
      'target-fitness': 8,
      'algorithm':{'name':'GA', 'params':{'mutation_prob':.05}}
 }
-´´´
+```
 
-### We have several serverless functions for populations:
+### We have several serverless functions that operate on Population objects
