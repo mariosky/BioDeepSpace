@@ -41,6 +41,7 @@ These functions are not application dependant:
 * kill_old(*population_list*, *kwparams*)
 
 ### Search is done by pushing populations algorithms:
+These functions cold be available by a 3rd party
 * eval_functions(population)
 * ga(population, iterations,  *kwparams*)
 * pso(population, iterations,  *kwparams*)
