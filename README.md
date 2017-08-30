@@ -34,17 +34,17 @@ For instance a population in python could be:
 ```
 ### We have several serverless functions that operate on population objects
 These functions are not application dependant:
-clone( population)
-get_best( *population_list* )
-reproduce(*population_list*, *kwparams*)
-exchange(*population_list*, *kwparams*)
-kill_old(*population_list*, *kwparams*)
+* clone( population)
+* get_best( *population_list* )
+* reproduce(*population_list*, *kwparams*)
+* exchange(*population_list*, *kwparams*)
+* kill_old(*population_list*, *kwparams*)
 
 ### Search is done by pushing populations to population based algorithms:
-eval_functions(population)
-ga(population, iterations,  *kwparams*)
-pso(population, iterations,  *kwparams*)
-gwo(population, iterations,  *kwparams*)
+* eval_functions(population)
+* ga(population, iterations,  *kwparams*)
+* pso(population, iterations,  *kwparams*)
+* gwo(population, iterations,  *kwparams*)
 
 ### Function parameters can include the algorithm environment set-up
 An example environment, from an [EvoWorker](https://github.com/mariosky/EvoWorker/blob/master/docker_exp.py):
