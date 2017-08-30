@@ -1,8 +1,6 @@
 # BioDeepSpace
 
-
 ### The Most Basic Object is a Population
-
 * We only care about population objects not individuals.
 * We allways have collection of small populations.
 * Populations are only data. JSON objects with out any methods.
@@ -13,12 +11,8 @@
     * best-fitness
     * target-fitness
     * state
-
 * The actual population is a list of JSON objects. They are normally a list of individuals or even other populations.
-
-
 For instance a population in python could be:
-
 ``` python
 {
     'id':'8sfgsdfg098qt7981739487',
@@ -38,7 +32,6 @@ For instance a population in python could be:
      'owner':'23321'
 }
 ```
-
 ### We have several serverless functions that operate on population objects
 These functions are not application dependant:
 clone( population)
@@ -80,4 +73,3 @@ es_conf = {
 * Ready for distributed COCO´s BBOB noiseless testbed benchmark
 * Compatible with EvoSpace
 * You can either pull or push asynchronously
- 
