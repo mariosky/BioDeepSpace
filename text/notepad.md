@@ -1,5 +1,5 @@
 
-Creating a very simple python action
+### Creating a very simple python action
 
 After installing using the [Quick Start](https://github.com/apache/incubator-openwhisk#quick-start) go to your  whisk vm:
 
