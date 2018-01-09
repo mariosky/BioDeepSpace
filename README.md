@@ -2,16 +2,18 @@
 
 ### The Most Basic Object is a Population
 * We only care about population objects not individuals.
-* We allways have collection of small populations.
+* We allways have a collection (or population) of small populations.
 * Populations are only data. JSON objects with out any methods.
-* Populations can have arbitrary metadata depending on the application. We propose to start with:
+* Populations have metadata depending on the application. We propose to start with:
     * id
     * age
     * best-solution
     * best-fitness
     * target-fitness
     * state
+
 * The actual population is a list of JSON objects. They are normally a list of individuals or even other populations.
+
 For instance a population in python could be:
 ``` python
 {
@@ -41,11 +43,16 @@ These functions are not application dependant:
 * kill_old(*population_list*, *kwparams*)
 
 ### Search is done by pushing populations algorithms:
-These functions cold be available by a 3rd party
+These functions can be developed by a 3rd party
 * eval_functions(population)
 * ga(population, iterations,  *kwparams*)
 * pso(population, iterations,  *kwparams*)
 * gwo(population, iterations,  *kwparams*)
+
+Each function is Stateless and it could be seen as a short lived process, that runs a GA algorithm for only a few generations with a small population.
+There are two variants:
+* Function evaluation is done inside the algorithm. In this case an algorithm could run for several generations.
+* Function evaluation is expensive or must be done by a 3rd party. In this case the function is limited to only one generation (selection, crossover, mutation).
 
 ### Function parameters can include the algorithm environment set-up
 An example environment, from an [EvoWorker](https://github.com/mariosky/EvoWorker/blob/master/docker_exp.py):
