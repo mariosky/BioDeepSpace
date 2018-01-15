@@ -36,7 +36,6 @@ For instance a population in python could be:
 ```
 ### We have several serverless functions that operate on population objects
 These functions are not application dependant:
-* clone( population)
 * get_best( *population_list* )
 * reproduce(*population_list*, *kwparams*)
 * exchange(*population_list*, *kwparams*)
